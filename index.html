@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Metadata</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm mb-2  p-0">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="assets/images/logo.png" alt="" width="250px"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav me-auto">
+            </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid py-1">
+        <div class="row">
+            <div class="col-md-7">
+                <div class="row">
+                    <div class="col-md-6">
+                        <!-- Meta tags field -->
+                        <div class="form-group pb-1">
+                            <input class="form-control" id="fortable1" type="file" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" onchange="Upload(this)">
+                        </div>
+                        <table class="table table-striped table-hover pb-2">
+                            <thead class="bg-info">
+                                <th class="text-white text-center" colspan="2">Corrected AI Metadata</th>
+                            </thead>
+                            <tbody id="table-tbody">
+                                <!-- display all fields here -->
+                            </tbody>
+                        </table>
+                        
+                        <div class="bg-white" colspan="2">
+                            <!-- <button type="button" id="download-btn" style="display: none;" onclick="downloadXML()" class="btn bg-success text-white"><strong>Call programme Meta-tags</strong></button> -->
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <!-- Meta tags field -->
+                        <div class="form-group pb-1">
+                            <input class="form-control" id="fortable2" type="file" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" onchange="Upload(this)">
+                        </div>
+                        <table class="table table-striped table-hover pb-2">
+                            <thead class="bg-info">
+                                <th class="text-white text-center" colspan="2">AI Metadata</th>
+                            </thead>
+                            <tbody id="table-tbody2">
+                                <!-- display all fields here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <!-- PDF viewer -->
+                <div class="form-group pb-1">
+                    <input class="form-control" accept="application/pdf" type="file" id="formFile" onchange="uploadPDF()">
+                </div>
+                <object alt="..." data="assets/images/R.png" id="show" class="bg-light"  type="application/pdf" style="width: 100%; height: 100vh;"></object>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.13.5/xlsx.full.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.13.5/jszip.js"></script>
+    <script src="assets/js/index.js"></script>
+</body>
+</html>
