@@ -88,12 +88,8 @@ function ProcessExcel(data, tbodyId) {
     document.getElementById(`${tbodyId}`).innerHTML = '';
     //Add the data rows from Excel file.
     for (var i = 0; i < excelRows.length; i++) {
-        let value = '';
-        let readOnly = false;
-        if (tbodyId === 'table-tbody2') {
-            value = excelRows[i]['Value'] ? excelRows[i]['Value'] : ''
-            readOnly = true;
-        }
+        let value = excelRows[i]['Value'] ? excelRows[i]['Value'] : ''
+        let readOnly = (tbodyId === 'table-tbody2');
         newMetaTagField(excelRows[i]['Metadata'], 'text', value, tbodyId, readOnly);
     }
     // document.getElementById('download-btn').style.display =  (excelRows.length > 0) ? 'block' : 'none';
