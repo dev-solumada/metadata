@@ -94,7 +94,7 @@ function ProcessExcel(data, tbodyId) {
             value = excelRows[i]['Value'] ? excelRows[i]['Value'] : ''
             readOnly = true;
         }
-        newMetaTagField(excelRows[i]['Meta data'], 'text', value, tbodyId, readOnly);
+        newMetaTagField(excelRows[i]['Metadata'], 'text', value, tbodyId, readOnly);
     }
     // document.getElementById('download-btn').style.display =  (excelRows.length > 0) ? 'block' : 'none';
 };
